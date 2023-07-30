@@ -8,16 +8,7 @@ html {
     @content;
   }
 }
-@mixin tablet {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-@mixin laptop {
-  @media screen and (max-width: 1200px) {
-    @content;
-  }
-}
+
 .app-title {
   padding-left: 32px;
   font-size: 48px;
@@ -166,7 +157,7 @@ html {
 .add-btn {
   padding: 0px 3px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   border: none;
   outline: none;
   background-color: #fff;
@@ -174,7 +165,7 @@ html {
 .add-new {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 .todo-title {
@@ -249,7 +240,7 @@ html {
 
 .more {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   color: #2e56db;
   text-decoration: underline;
