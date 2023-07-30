@@ -18,7 +18,7 @@ function App() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/chats">Chats</NavLink>
+            <NavLink to="/chat">Chats</NavLink>
           </li>
         </ul>
       </nav>
