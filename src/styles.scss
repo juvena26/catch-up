@@ -147,6 +147,9 @@ html {
   flex-direction: row;
   gap: 16px;
   padding-top: 32px;
+  @include mobile {
+    flex-direction: column;
+  }
 }
 .todo-container {
   background-color: #fff;
