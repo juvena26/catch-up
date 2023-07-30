@@ -8,12 +8,10 @@ import { Link } from "react-router-dom";
 const ChatsNavbar = () => {
   return (
     <div className="c-toolbar">
-      <div className="input-icons">
-        <div className="icon-mobile">
-          <Link to="/chatlist">
-            <BsChevronLeft />
-          </Link>
-        </div>
+      <div className="icon">
+        <Link to="/">
+          <BsChevronLeft />
+        </Link>
       </div>
 
       <span className="menu-icons">
