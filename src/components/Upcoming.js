@@ -1,5 +1,4 @@
 import React from "react";
-import { BsChevronDoubleRight } from "react-icons/bs";
 const Upcoming = () => {
   return (
     <>
