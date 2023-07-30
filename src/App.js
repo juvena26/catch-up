@@ -6,20 +6,22 @@ import { GiThreeFriends } from "react-icons/gi";
 function App() {
   return (
     <div>
-      <h1 className="app-title">
-        Catch up <GiThreeFriends />
-      </h1>
-      <div className="open-navbar">
+      <nav class="login-navbar">
+        <div className="app-title">
+          Catch up <GiThreeFriends />
+        </div>
+
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink exact to="/">
+              Home
+            </NavLink>
           </li>
           <li>
-            {" "}
-            <NavLink to="/chat">Chat</NavLink>
+            <NavLink to="/chats">Chats</NavLink>
           </li>
         </ul>
-      </div>
+      </nav>
 
       <Routes>
         <Route exact path="/" element={<Home />}></Route>

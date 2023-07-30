@@ -1,11 +1,34 @@
 body,
 html {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 @mixin mobile {
   @media screen and (max-width: 480px) {
     @content;
+  }
+}
+
+.login-navbar {
+  justify-content: flex-start;
+  align-items: center;
+  ul {
+    background-color: #4068eb;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  li {
+    list-style: none;
+    padding-right: 14px;
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+    }
   }
 }
 
@@ -130,7 +153,7 @@ html {
   margin: 24px;
   padding: 16px;
   width: 350px;
-  height: 400px;
+  height: auto;
   border-radius: 6px;
   overflow: scroll;
   @include mobile {
@@ -248,4 +271,281 @@ html {
 .chat-msg {
   padding-left: 20px;
   font-size: 14px;
+}
+
+.chats-tab {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  .chat-wrapper {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    opacity: 100%;
+
+    position: absolute;
+    z-index: 3;
+    .c-container {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      .c-chat {
+        background-color: #fbe8e8;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        width: 100%;
+        height: 100%;
+
+        .c-msg {
+          display: flex;
+          flex-direction: row-reverse;
+          padding: 10px 10px 0 0;
+        }
+        .c-msg-bg {
+          background-color: #4068eb;
+          padding: 10px;
+          color: white;
+          border-radius: 10px 0 10px 10px;
+          max-width: 80%;
+        }
+      }
+    }
+    .c-toolbar {
+      height: 75px;
+      background-color: #8da4f1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: white 1px solid;
+      img {
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding-right: 6px;
+        border-radius: 50%;
+      }
+      .profile-name {
+        font-weight: 700;
+        color: #ffff;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .menu-icons {
+        gap: 16px;
+        color: #fff;
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding-right: 16px;
+      }
+    }
+
+    .c-sidenav-toggle {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .c-sidenav {
+      width: 350px;
+      height: 100%;
+      color: white;
+      font-size: 14px;
+      background-color: #8da4f1;
+      padding: 16px;
+
+      .c-list {
+        @include mobile {
+          width: 100%;
+          height: 300px;
+          overflow: scroll;
+          background-color: orange;
+        }
+        .c-listitem {
+          display: flex;
+          display: row;
+          border-bottom: white 1px solid;
+          padding: 14px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            padding-right: 6px;
+            border-radius: 50%;
+          }
+        }
+        .list-name {
+          font-weight: 700;
+          color: #ffff;
+          align-items: flex-start;
+          justify-content: flex-start;
+          display: flex;
+        }
+      }
+    }
+  }
+  .c-input {
+    position: relative;
+    bottom: 0;
+  }
+  .dummy {
+    padding: 16px 0 16px 16px;
+  }
+  .friend-text {
+    background-color: orange;
+    color: #ffff;
+    padding: 14px;
+    border-radius: 0 10px 10px 10px;
+  }
+}
+.icon-mobile {
+  display: none;
+  @include mobile {
+    display: block;
+    padding-left: 24px;
+  }
+}
+.icon-on-mobile {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+  span {
+    font-size: 14px;
+    color: rgb(185, 78, 169);
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8px;
+  }
+}
+.list-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  @include mobile {
+    width: 30px;
+    height: 30px;
+  }
+}
+.bg-on-mobile {
+  display: none;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: #a7bcff;
+    padding: 24px;
+    height: 100%;
+  }
+  .c-list {
+    display: flex;
+    flex-direction: column;
+    .c-listitem {
+      padding: 12px;
+      border-bottom: 1px solid white;
+      display: flex;
+      flex-direction: row;
+    }
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      .list-name {
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        color: white;
+      }
+    }
+    .message-in-list {
+      font-weight: 800;
+      padding-left: 10px;
+      color: white;
+    }
+  }
+}
+
+.send-btn {
+  background-color: #4f6bc8;
+  color: white;
+  border: none;
+  width: 70px;
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 14px;
+}
+.message {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10px;
+}
+.back-home {
+  display: flex;
+  flex-direction: row;
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+.chat-messages {
+  background-color: #dddfe4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  .messages {
+    background-color: #e5eafa;
+    padding: 10px;
+    height: 100px;
+    overflow: scroll;
+  }
+}
+.chat-messages {
+  background-color: #dddfe4;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  .messages {
+    background-color: #e5eafa;
+    padding: 10px;
+    height: 100px;
+    overflow: scroll;
+  }
+}
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.input-box {
+  background-color: #fff;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+}
+.input-icons {
+  display: flex;
+  gap: 14px;
+  font-size: 18px;
+  align-items: center;
+
+  @include mobile {
+    display: none;
+  }
+}
+.chatbox-sidenav-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  padding: 16px;
+  font-family: sans-serif;
 }

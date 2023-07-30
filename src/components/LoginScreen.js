@@ -79,8 +79,8 @@ const LoginScreen = () => {
               <div className="unread-chats">
                 <Unread />
               </div>
-              <Link to="/chats" className="more">
-                More..
+              <Link to="/chat" className="more">
+                Go to Chat..
               </Link>
             </div>
           </div>
